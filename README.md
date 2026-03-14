@@ -41,7 +41,8 @@ Borrow out = A'Bin + A'B + BBin
 
 <img width="1102" height="719" alt="Screenshot 2026-03-10 094649" src="https://github.com/user-attachments/assets/b28a81ac-9acc-4ce5-838e-9300962b6320" />
 
-
+name:B.SAM JOEL JOSHUA
+register number:212225230242
 
 
 **Procedure**
