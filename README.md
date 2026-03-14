@@ -37,19 +37,73 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+<img width="1050" height="738" alt="Screenshot 2026-03-10 094639" src="https://github.com/user-attachments/assets/79d6b375-fe21-4a3f-8e64-47f2d10fbd85" />
+
+<img width="1102" height="719" alt="Screenshot 2026-03-10 094649" src="https://github.com/user-attachments/assets/b28a81ac-9acc-4ce5-838e-9300962b6320" />
+
+
+
 
 **Procedure**
 
-Write the detailed procedure here
 
-**Program:**
+1.Type the program in Quartus software
+2.Compile and run the program
+3.Generate the RTL schematic and save the logic diagram
+4.Create nodes for inputs and outputs to generate the timing diagram
+4.For different inputs combinations generate the timing diagram
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
 
-**RTL Schematic**
 
-**Output Timing Waveform**
+**Program-1:**
+```
+
+module deexp3(
+    input A, B, Cin,
+    output Sum, Carry
+);
+
+    assign Sum   = A ^ B ^ Cin;
+    assign Carry = (A & B) | (Cin & (A ^ B));
+
+endmodule
+```
+
+
+
+**RTL Schematic-1**
+<img width="1920" height="1080" alt="Screenshot (187)" src="https://github.com/user-attachments/assets/d040065f-7748-47a1-9675-804f7fe65263" />
+
+
+**Output Timing Waveform-1**
+<img width="1920" height="1080" alt="Screenshot (186)" src="https://github.com/user-attachments/assets/5a111b8a-dc4e-45d9-9518-3ab7028e796c" />
+
+**Program-2:**
+
+```
+module deexp3a(
+    input A, B, Bin,
+    output Difference, Borrow
+);
+
+    assign Difference = A ^ B ^ Bin;
+    assign Borrow     = (~A & B) | (~A & Bin) | (B & Bin);
+
+endmodule
+```
+
+
+**RTL Schematic-2**
+<img width="1920" height="1080" alt="Screenshot (188)" src="https://github.com/user-attachments/assets/e14edf25-38f7-4ac1-9f0b-f3b57092c3f3" />
+
+
+
+
+
+**Output Timing Waveform-2**
+
+<img width="1920" height="1080" alt="Screenshot (189)" src="https://github.com/user-attachments/assets/e29b205a-093c-4f7e-a448-be57ef2dade7" />
+
 
 **Result:**
 
